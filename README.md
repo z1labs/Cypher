@@ -11,7 +11,7 @@ Cypher's standout feature is its use of FHEVM encryption, enabling fully homomor
 
 - [Features](#features)
 - [Architecture](#architecture)
-- [Example](#example)
+- [Examples](#examples)
 - [Documentation](#documentation)
 
 ## Features
@@ -77,13 +77,10 @@ Cypher's standout feature is its use of FHEVM encryption, enabling fully homomor
 
 > 💡 **Attention**:: The decryption operation is asynchronous. To use it, your contract must extend the GatewayCaller contract. This will import automatically the Gateway solidity library as well.
 
-## Example
+## Examples
 
+### Counter
 ```
-// SPDX-License-Identifier: BSD-3-Clause-Clear
-
-pragma solidity ^0.8.24;
-
 import "fhevm/lib/TFHE.sol";
 
 contract Counter {
@@ -96,6 +93,24 @@ contract Counter {
   }
 }
 ```
+### Random
+```
+import "fhevm/lib/TFHE.sol";
+
+contract Rand {
+    euint8 public value8;
+
+    constructor() payable {
+        TFHE.setFHEVM(FHEVMConfig.defaultConfig());
+    }
+
+    function generate8() public {
+        value8 = TFHE.randEuint8();
+        TFHE.allowThis(value8);
+    }
+}
+```
+
 ### Documentation
 Check the documetation for a step by step guide how to run own 
 - [Build and deploy smart contracts]
