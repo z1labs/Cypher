@@ -1,0 +1,18 @@
+[submodule "fastcache"]
+	path = fastcache
+	url = https://github.com/OffchainLabs/fastcache
+[submodule "nitro-testnode"]
+	path = nitro-testnode
+	url = https://github.com/OffchainLabs/nitro-testnode
+[submodule "fhevm-go"]
+	path = fhevm-go
+	url = git@github.com:z1labs/Cypher-fhEVM-Go.git
+[submodule "go-ethereum"]
+	path = go-ethereum
+	url = git@github.com:z1labs/Cypher-Go-Ethereum.git
+[submodule "safe-smart-account"]
+	path = safe-smart-account
+	url = https://github.com/safe-global/safe-smart-account.git
+[submodule "contracts"]
+	path = contracts
+	url = https://github.com/OffchainLabs/nitro-contracts

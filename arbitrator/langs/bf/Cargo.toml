@@ -1,0 +1,17 @@
+[package]
+name = "stylus-sdk-bf"
+version = "0.1.1"
+edition = "2021"
+authors = ["Offchain Labs"]
+license = "MIT OR Apache-2.0"
+homepage = "https://github.com/OffchainLabs/stylus-sdk-bf"
+repository = "https://github.com/OffchainLabs/stylus-sdk-bf"
+description = "Brainfuck support for Arbitrum Stylus"
+keywords = ["ethereum", "arbitrum", "stylus", "brainfuck"]
+
+[dependencies]
+eyre = "0.6.5"
+structopt = "0.3.23"
+wasmer = "4.1.1"
+
+[workspace]
