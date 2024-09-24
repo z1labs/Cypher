@@ -1,0 +1,24 @@
+{
+    "language": "Solidity",
+    "sources":
+    {
+      "erc20":
+      {
+        "urls":
+        [
+          "./erc20.sol"
+        ]
+      }
+    },
+    "settings":
+    {
+      "outputSelection": {
+        "*": {
+          "*": [
+            "abi",
+            "storageLayout"
+          ]
+        }
+      }
+    }
+}
