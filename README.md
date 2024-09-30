@@ -1,3 +1,4 @@
+
 ## **Cypher**
 
   
@@ -14,15 +15,10 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-  
+**Cypher**, FHE-EVM Layer is the core of the DeAI ecosystem, designed to optimize blockchain for AI applications. It integrates Fully Homomorphic Encryption (FHE) with Ethereum Virtual Machine (EVM) compatibility, allowing encrypted AI computation without sacrificing performance. This combination ensures that data remains secure while being processed by AI, maintaining both confidentiality and efficiency.
 
-**Cypher** is a Layer 3 (L3) solution built on Arbitrum, utilizing both Arbitrum Nitro and Arbitrum Orbit to enhance scalability and functionality. Arbitrum Nitro provides optimized rollup technology for efficient execution, while Arbitrum Orbit allows decentralized Layer 3 deployment. Together, they extend Ethereum’s capabilities with the security and low transaction costs of Arbitrum's Layer 2 (L2) infrastructure.
+The FHE-EVM integration supports encrypted data processing within smart contracts, enabling secure AI execution on-chain. It includes precompiled cryptographic contracts that embed FHE operations to optimize execution and reduce computational overhead. Additionally, FHE gas optimization adjusts gas calculations specifically for FHE operations, ensuring efficient resource use.
 
-  
-
-Cypher's standout feature is its use of FHEVM encryption, enabling fully homomorphic encryption (FHE) within smart contracts. This allows encrypted data to be processed without decryption, ensuring privacy and security throughout computation. By combining this privacy-focused approach with Arbitrum’s scalability, Cypher offers a unique solution for secure, scalable applications on Ethereum.
-
-  
 
 ## Table of Contents
 
@@ -52,20 +48,17 @@ In this system, separate gateway nodes act as decryptors. Upon request, they ver
 ## Features
 
   
-
--  **Layer 3 (L3) Architecture:** Built on top of Arbitrum, Cypher leverages both Arbitrum Nitro and Arbitrum Orbit to enhance scalability and flexibility, while maintaining Ethereum’s security guarantees.
-
 -  **Solidity integration:** fhEVM contracts are simple solidity contracts that are built using traditional solidity toolchains.
 
 -  **FHEVM Encryption:** Cypher integrates fully homomorphic encryption (FHE) into smart contracts, allowing computations to be performed on encrypted data without ever needing to decrypt it, ensuring maximum privacy and security.
 
--  **Optimized Rollup Technology:** With Arbitrum Nitro’s efficient rollup design, Cypher achieves faster execution and lower transaction costs, making it ideal for high-throughput decentralized applications.
+-  **Optimized Rollup Technology:** With Rollup design, Cypher achieves faster execution and lower transaction costs, making it ideal for high-throughput decentralized applications.
 
--  **Decentralized Layer 3 Deployment:** Utilizing Arbitrum Orbit, Cypher enables decentralized deployment of Layer 3 solutions, giving developers more control and flexibility in building applications.
+-  **Decentralized Layer 3 Deployment:** Utilizing Rollup, Cypher enables decentralized deployment of Layer 3 solutions, giving developers more control and flexibility in building applications.
 
 -  **Privacy-Preserving Computations**: By using FHE, Cypher ensures that all computations are private, allowing sensitive data to remain encrypted while still enabling meaningful operations, ideal for industries requiring high levels of data confidentiality.
 
--  **Low-Cost Transactions**: Cypher benefits from Arbitrum’s Layer 2 infrastructure, providing a low-cost environment for executing smart contracts without sacrificing security or decentralization.
+-  **Low-Cost Transactions**: Cypher benefits from Rollup Layer 2 infrastructure, providing a low-cost environment for executing smart contracts without sacrificing security or decentralization.
 
 -  **Scalability**: Cypher enhances the scalability of Ethereum, allowing more complex and resource-intensive decentralized applications (dApps) to run seamlessly on its platform.
 
@@ -79,9 +72,9 @@ In this system, separate gateway nodes act as decryptors. Upon request, they ver
 
   
 
--  **Layer 2 (L2) - Arbitrum:** Acts as the parent chain, utilizing optimized rollup technology for efficient execution. It batches and processes transactions off-chain, offering high throughput and low fees while maintaining Ethereum's security model.
+-  **Layer 2 (L2) - Rollup:** Acts as the parent chain, utilizing optimized rollup technology for efficient execution. It batches and processes transactions off-chain, offering high throughput and low fees while maintaining Ethereum's security model.
 
--  **Layer 3 (L3) - Cypher with FHEVM Integration**: Built on Arbitrum Orbit rollup, Cypher introduces FHE capabilities into smart contracts, enabling secure and private computations on encrypted data.
+-  **Layer 3 (L3) - Cypher with FHEVM Integration**: Built on Rollup, Cypher introduces FHE capabilities into smart contracts, enabling secure and private computations on encrypted data.
 
   
 
@@ -89,9 +82,9 @@ In this system, separate gateway nodes act as decryptors. Upon request, they ver
 
   
 
--  **fhevm-go Library**: Cypher integrates the fhevm-go library into the go-ethereum client, a component of Arbitrum Nitro. This integration allows smart contracts to perform computations on encrypted data seamlessly, leveraging fully homomorphic encryption capabilities.
+-  **fhevm-go Library**: Cypher integrates the fhevm-go library into the go-ethereum client, a component of Rollup. This integration allows smart contracts to perform computations on encrypted data seamlessly, leveraging fully homomorphic encryption capabilities.
 
--  **Containerized Execution**: The modified go-ethereum client runs within a Docker container under Arbitrum Orbit's rollup. This setup ensures isolated and efficient execution of Layer 3 operations, enhancing scalability and security.
+-  **Containerized Execution**: The modified go-ethereum client runs within a Docker container under rollup. This setup ensures isolated and efficient execution of Layer 3 operations, enhancing scalability and security.
 
   
 
@@ -108,9 +101,6 @@ In this system, separate gateway nodes act as decryptors. Upon request, they ver
 -  **dApp Re-encryption:** For decentralized applications needing plaintext, the Gateway provides an API to re-encrypt ciphertext with the dApp's public key, allowing the dApp to decrypt it locally.
 
   
-  
-
-> 💡 **Attention**:: Once decrypted, information becomes accessible to everyone on the blockchain. Therefore, strict access controls are essential.
 
   
 
@@ -159,6 +149,8 @@ In this system, separate gateway nodes act as decryptors. Upon request, they ver
 -  **Asynchronous Fulfillment:** The decryption process can take time and is fulfilled asynchronously, usually within 2 blocks on the fhEVM testnet. The relayer ensures timely delivery of the decryption results, but the contract can specify a maximum timestamp for valid decryption results.
 
 -  **Relayer and KMS:** The relayer simply forwards decryption requests, while the KMS signature verification ensures that the relayer cannot tamper with the decryption result.
+
+> 💡 **Attention**:: Once decrypted on smart contract, information becomes accessible to everyone on the blockchain. Therefore, strict access controls are essential.
 
   
 
