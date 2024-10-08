@@ -23,4 +23,3 @@ system_tests/test-data/*
 .configs/
 system_tests/testdata/*
 arbos/testdata/*
-keys/*

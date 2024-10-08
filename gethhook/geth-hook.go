@@ -20,15 +20,12 @@ type ArbosPrecompileWrapper struct {
 	inner precompiles.ArbosPrecompile
 }
 
-type PrecompileAccessibleState interface {
-	Interpreter() *vm.EVMInterpreter
-}
-
-func (p ArbosPrecompileWrapper) RequiredGas(accessibleState vm.PrecompileAccessibleState, input []byte) uint64 {
+func (p ArbosPrecompileWrapper) RequiredGas(state vm.PrecompileAccessibleState, input []byte) uint64 {
+	// Implement the logic here if needed, or keep the panic if it's not supposed to be called.
 	panic("Non-advanced precompile method called")
 }
 
-func (p ArbosPrecompileWrapper) Run(accessibleState vm.PrecompileAccessibleState, caller common.Address, addr common.Address, input []byte, readOnly bool) ([]byte, error) {
+func (p ArbosPrecompileWrapper) Run(state vm.PrecompileAccessibleState, precompileAddr common.Address, actingAsAddr common.Address, input []byte, readOnly bool) ([]byte, error) {
 	panic("Non-advanced precompile method called")
 }
 
@@ -38,8 +35,8 @@ func (p ArbosPrecompileWrapper) RunAdvanced(
 	info *vm.AdvancedPrecompileCall,
 ) (ret []byte, gasLeft uint64, err error) {
 
-	// Precompiles don't actually enter evm execution like normal calls do,
-	// so we need to increment the depth here to simulate the callstack change.
+	// Precompiles don't actually enter EVM execution like normal calls do,
+	// so we need to increment the depth here to simulate the call stack change.
 	info.Evm.IncrementDepth()
 	defer info.Evm.DecrementDepth()
 

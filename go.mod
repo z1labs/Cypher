@@ -8,6 +8,12 @@ replace github.com/ethereum/go-ethereum => ./go-ethereum
 
 replace github.com/zama-ai/fhevm-go v0.5.1 => ./fhevm-go
 
+
+replace github.com/offchainlabs/nitro/solgen/go/bridgegen => ./solgen/go/bridgegen
+replace github.com/offchainlabs/nitro/solgen/go/rollupgen => ./solgen/go/rollupgen
+replace github.com/offchainlabs/nitro/solgen/go/challengegen => ./solgen/go/challengegen
+replace github.com/offchainlabs/nitro/solgen/go/node_interfacegen => ./solgen/go/node_interfacegen
+
 require (
 	github.com/Knetic/govaluate v3.0.1-0.20171022003610-9aa49832a739+incompatible
 	github.com/Shopify/toxiproxy v2.1.4+incompatible
@@ -43,7 +49,6 @@ require (
 	github.com/rivo/tview v0.0.0-20240307173318-e804876934a1
 	github.com/spf13/pflag v1.0.5
 	github.com/syndtr/goleveldb v1.0.1-0.20210819022825-2ae1ddf74ef7
-	github.com/wasmerio/wasmer-go v1.0.4
 	github.com/wealdtech/go-merkletree v1.0.0
 	golang.org/x/crypto v0.21.0
 	golang.org/x/exp v0.0.0-20231110203233-9a3e6036ecaa
@@ -57,7 +62,7 @@ require (
 	github.com/go-logr/logr v1.4.1 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/google/go-querystring v1.1.0 // indirect
-	github.com/zama-ai/fhevm-go v0.5.1 // indirect
+	github.com/pelletier/go-toml v1.9.3 // indirect
 	go.opentelemetry.io/otel v1.23.1 // indirect
 	go.opentelemetry.io/otel/metric v1.23.1 // indirect
 	go.opentelemetry.io/otel/trace v1.23.1 // indirect
@@ -107,7 +112,6 @@ require (
 	github.com/dop251/goja v0.0.0-20230806174421-c933cf95e127 // indirect
 	github.com/dustin/go-humanize v1.0.0 // indirect
 	github.com/ethereum/c-kzg-4844 v0.4.0 // indirect
-	github.com/fjl/memsize v0.0.2 // indirect
 	github.com/fsnotify/fsnotify v1.6.0 // indirect
 	github.com/gammazero/deque v0.2.1 // indirect
 	github.com/gballet/go-libpcsclite v0.0.0-20190607065134-2772fd86a8ff // indirect
@@ -172,7 +176,8 @@ require (
 	github.com/vmihailenco/tagparser/v2 v2.0.0 // indirect
 	github.com/xrash/smetrics v0.0.0-20201216005158-039620a65673 // indirect
 	github.com/yuin/gopher-lua v1.1.1 // indirect
-	go.opencensus.io v0.22.5 // indirect
+	github.com/zama-ai/fhevm-go v0.5.1 // indirect
+	go.opencensus.io v0.23.0 // indirect
 	golang.org/x/mod v0.14.0 // indirect
 	golang.org/x/net v0.23.0 // indirect
 	golang.org/x/oauth2 v0.22.0
