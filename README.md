@@ -33,7 +33,7 @@ The FHE-EVM integration supports encrypted data processing within smart contract
 - [Documentation](#documentation)
 
 ## Overview
-Homomorphic encryption is fundamentally designed to enable direct computation on data while it remains encrypted. This means the information can stay confidential throughout its processing, allowing valuable tasks to be conducted even when working with data stored in untrusted or distributed environments. In today’s world of distributed computing and heterogeneous networks, this capability is exceptionally important.
+Homomorphic encryption is fundamentally designed to enable direct computation of data while it remains encrypted. This means the information can stay confidential throughout its processing, allowing valuable tasks to be conducted even when working with data stored in untrusted or distributed environments. In today’s world of distributed computing and heterogeneous networks, this capability is exceptionally important.
 
 A homomorphic cryptosystem shares similarities with other public-key encryption methods: it uses a public key for encryption and restricts decryption to the private key holder. Its key distinction, however, lies in its algebraic framework, which makes it possible to carry out various types of computations on the encrypted data itself.
 
@@ -232,7 +232,7 @@ TFHE.allowThis(value8);
 
 ### Documentation
 
-Check the documetation for a step by step guide how to run own
+Check the documentation for a step-by-step guide on how to run your own
 
 - [Build and deploy smart contracts]
 
